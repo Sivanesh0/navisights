@@ -6,10 +6,10 @@ export const links = [
     path: "/",
     name: "Home",
   },
-  {
-    path: "/services",
-    name: "Services",
-  },
+  // {
+  //   path: "/services",
+  //   name: "Services",
+  // },
   {
     path: "/product",
     name: "Product",
@@ -22,15 +22,15 @@ export const links = [
     path: "/achievements",
     name: "Achievements",
   },
-  {
-    path: "/faq",
-    name: "FAQ",
-  },
+  // {
+  //   path: "/faq",
+  //   name: "FAQ",
+  // },
 ];
 
 const Navbar = () => {
   return (
-    <div className='px-4 py-8 flex flex-col md:flex-row justify-center gap-4 font-raleway text-xl bg-background text-white'>
+    <div className='hidden md:flex px-4 py-8 flex-col md:flex-row justify-center gap-4 font-raleway text-xl bg-black text-white'>
       {links.map((link, index) => (
         <NavLink
           className={({ isActive }) =>

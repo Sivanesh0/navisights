@@ -5,11 +5,9 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className='flex flex-col justify-evenly'>
+    <div className='flex flex-col justify-evenly bg-[url("/globe.jpg")]  bg-cover h-screen overflow-y-scroll'>
       <Navbar />
-      <div className='min-h-[80vh]'>
-        <Outlet />
-      </div>
+      <Outlet />
       <Footer />
     </div>
   );
