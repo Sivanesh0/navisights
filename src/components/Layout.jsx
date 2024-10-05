@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div>
+    <div className='flex flex-col justify-evenly'>
       <Navbar />
       <div className='min-h-[80vh]'>
         <Outlet />
