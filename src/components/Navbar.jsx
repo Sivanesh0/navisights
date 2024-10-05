@@ -30,9 +30,12 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="p-4 flex justify-center gap-4">
+    <div className='px-4 py-8 flex justify-center gap-4 font-raleway text-xl bg-background text-white'>
       {links.map((link, index) => (
-        <Link key={index} to={link.path}>
+        <Link
+          className='hover:text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text transition-all duration-150 ease-in'
+          key={index}
+          to={link.path}>
           {link.name}
         </Link>
       ))}
