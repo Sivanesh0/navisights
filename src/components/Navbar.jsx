@@ -1,26 +1,40 @@
-import React from "react";
+import {
+  BoxIcon,
+  HouseIcon,
+  InfoIcon,
+  HeartHandshakeIcon,
+  AwardIcon,
+  MenuIcon,
+  XIcon,
+} from "lucide-react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 export const links = [
   {
     path: "/",
     name: "Home",
+    icon: <HouseIcon strokeWidth={1} />,
   },
-  // {
-  //   path: "/services",
-  //   name: "Services",
-  // },
+  {
+    path: "/services",
+    name: "Services",
+    icon: <HeartHandshakeIcon strokeWidth={1} />,
+  },
   {
     path: "/product",
     name: "Product",
+    icon: <BoxIcon strokeWidth={1} />,
   },
   {
     path: "/about",
     name: "About",
+    icon: <InfoIcon strokeWidth={1} />,
   },
   {
     path: "/achievements",
     name: "Achievements",
+    icon: <AwardIcon strokeWidth={1} />,
   },
   // {
   //   path: "/faq",
@@ -29,20 +43,34 @@ export const links = [
 ];
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className='hidden md:flex px-4 py-8 flex-col md:flex-row justify-center gap-4 font-raleway text-xl bg-black text-white'>
-      {links.map((link, index) => (
-        <NavLink
-          className={({ isActive }) =>
-            `hover:text-transparent ${
-              isActive && "text-transparent"
-            } bg-gradient-to-tr from-purple-800 to-red bg-clip-text transition-all duration-150 ease-in`
-          }
-          key={index}
-          to={link.path}>
-          {link.name}
-        </NavLink>
-      ))}
+    <div className='relative w-full'>
+      <div
+        onClick={() => setOpen(!open)}
+        className='absolute top-4 right-4 md:hidden text-white z-20'>
+        {open ? <XIcon /> : <MenuIcon />}
+      </div>
+      <div
+        className={`w-full z-10 ${
+          open ? "flex flex-col bg-background" : "hidden"
+        } absolute md:flex md:flex-row px-4 py-8 md:justify-center gap-2 md:gap-4 font-raleway text-sm md:text-xl md:bg-black text-white`}>
+        {links.map((link, index) => (
+          <NavLink
+            className={({ isActive }) =>
+              `hover:text-transparent flex items-center gap-4 ${
+                isActive && "text-transparent"
+              } bg-gradient-to-tr from-purple-800 to-red bg-clip-text transition-all duration-150 ease-in`
+            }
+            onClick={() => setOpen(false)}
+            key={index}
+            to={link.path}>
+            <span className='text-white md:hidden'>{link.icon}</span>
+            {link.name}
+          </NavLink>
+        ))}
+      </div>
     </div>
   );
 };

@@ -5,3 +5,26 @@
 ::-webkit-scrollbar {
     display: none;
 }
+
+.icon-gradient {
+  fill: url(#gradient-fill);
+}
+
+.icon-gradient svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Optional: Define a default size for your icons */
+.icon-gradient {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Define the gradient */
+.svg-gradient {
+  background: linear-gradient(to top right, #6B21A8, #EF4444);
+  -webkit-background-clip: text;
+  background-clip: text;
+  fill: transparent;
+}
