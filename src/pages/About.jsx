@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollFx from "../components/ScrollAnimationComponent";
 
 const team = [
   {
@@ -56,19 +57,22 @@ const About = () => {
           <hr className='border-dashed' />
           <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
             {team.map((member, index) => (
-              <div
-                key={index}
-                className={`flex flex-col justify-center items-center`}>
-                <img
-                  className='size-56 rounded-full mx-auto object-cover'
-                  src={member.image}
-                  alt={member.title}
-                />
-                <h2 className='text-xl font-raleway font-bold'>
-                  {member.title}
-                </h2>
-                <p className='font-cormorant-garamond'>{member.description}</p>
-              </div>
+              <ScrollFx duration={1 + (index + 3) / 10} key={index}>
+                <div
+                  className={`flex flex-col justify-center items-center text-center`}>
+                  <img
+                    className='size-56 rounded-full mx-auto object-cover'
+                    src={member.image}
+                    alt={member.title}
+                  />
+                  <h2 className='text-xl font-raleway font-bold'>
+                    {member.title}
+                  </h2>
+                  <p className='font-cormorant-garamond'>
+                    {member.description}
+                  </p>
+                </div>
+              </ScrollFx>
             ))}
           </div>
         </section>
@@ -80,19 +84,22 @@ const About = () => {
           <hr className='border-dashed' />
           <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
             {mentors.map((mentor, index) => (
-              <div
-                key={index}
-                className={`flex flex-col justify-center items-center text-center`}>
-                <img
-                  className='size-56 rounded-full mx-auto object-cover'
-                  src={mentor.image}
-                  alt={mentor.title}
-                />
-                <h2 className='text-xl font-raleway font-bold'>
-                  {mentor.title}
-                </h2>
-                <p className='font-cormorant-garamond'>{mentor.description}</p>
-              </div>
+              <ScrollFx duration={1 + (index + 3) / 10} key={index}>
+                <div
+                  className={`flex flex-col justify-center items-center text-center`}>
+                  <img
+                    className='size-56 rounded-full mx-auto object-cover'
+                    src={mentor.image}
+                    alt={mentor.title}
+                  />
+                  <h2 className='text-xl font-raleway font-bold'>
+                    {mentor.title}
+                  </h2>
+                  <p className='font-cormorant-garamond'>
+                    {mentor.description}
+                  </p>
+                </div>
+              </ScrollFx>
             ))}
           </div>
         </section>
