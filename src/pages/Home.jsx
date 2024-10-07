@@ -17,7 +17,7 @@ const Home = () => {
         </h1>
       </div>
       {/* Quote */}
-      <div className='text-center font-raleway text-2xl py-32 bg-[url("/black-texture.png")] bg-black text-white'>
+      <div className='text-center font-raleway text-2xl py-32 bg-[url("/black-texture.png")] bg-background text-white'>
         <blockquote className='text-balance px-6 md:px-0'>
           Explore the Future of Transportation with{" "}
           <span className='text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text font-bold'>
@@ -32,23 +32,23 @@ const Home = () => {
         </blockquote>
       </div>
       {/* Vision and Aim */}
-      <div className='text-center font-raleway text-2xl py-16 bg-gradient-to-b from-black to-background text-white space-y-6'>
-        <h1 className='text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text'>
-          Our Vision And Aim
-        </h1>
-        <hr className='w-[70%] md:w-1/3 mx-auto' />
-        <p className='w-[90%] text-base text-justify md:text-center md:text-balance font-serif md:text-lg md:w-2/3 mx-auto'>
-          To pioneer a world where mobility knows no bounds, where every journey
-          is a gateway to boundless independence and empowerment.
-        </p>
-        <hr className='w-[70%] md:w-1/3 mx-auto' />
-        <p className='w-[90%] text-base text-justify md:text-center md:text-balance font-serif md:text-lg md:w-1/2 mx-auto'>
-          At S&S Navisights, we're committed to revolutionizing mobility
-          solutions for all. Our mission is to ignite innovation, craft
-          cutting-edge technologies, and foster inclusive environments, enabling
-          seamless navigation and transforming lives worldwide. "Gateway to
-          boundless independence and empowerment."
-        </p>
+      <div className='font-raleway text-2xl px-4 text-justify md:text-left md:px-0 py-16 bg-[url("/cubes.png")] bg-black text-white'>
+        <div className='md:w-2/3 mx-auto space-y-6'>
+          <h1 className='font-afacad-flux text-5xl font-semibold text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text'>
+            Our Vision And Aim
+          </h1>
+          <p className='font-cormorant-garamond text-xl'>
+            To pioneer a world where mobility knows no bounds, where every
+            journey is a gateway to boundless independence and empowerment.
+          </p>
+          <p className='font-cormorant-garamond text-xl'>
+            At S&S Navisights, we're committed to revolutionizing mobility
+            solutions for all. Our mission is to ignite innovation, craft
+            cutting-edge technologies, and foster inclusive environments,
+            enabling seamless navigation and transforming lives worldwide.
+            "Gateway to boundless independence and empowerment."
+          </p>
+        </div>
       </div>
     </div>
   );

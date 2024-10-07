@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         "afacad-flux": ["Afacad Flux", "sans-serif"],
+        "cormorant-garamond": ["Cormorant Garamond", "serif"],
         raleway: ["Raleway", "sans-serif"],
       },
     },

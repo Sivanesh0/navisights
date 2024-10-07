@@ -44,14 +44,14 @@ const Footer = () => {
 
   return (
     <div className='bg-gradient-to-tr from-purple-900 to-dark-maroon text-white px-3 py-7 flex flex-col md:flex-row gap-8 justify-around font-raleway'>
-      <div className='space-y-4 text-center place-self-center'>
+      <div className='space-y-4 text-center md:text-left place-self-center'>
         <h1 className='text-4xl md:text-5xl font-afacad-flux font-light'>
           Navisights
         </h1>
-        <h1 className="text-sm">Copyrights 2024 © All rights reserved.</h1>
+        <h1 className='text-sm'>Copyrights 2024 © All rights reserved.</h1>
       </div>
       <div className='flex justify-around md:w-1/2'>
-        <div className='flex flex-col gap-1'>
+        <div className='flex flex-col gap-3'>
           {links.map((link, index) => (
             <Link
               className='hover:underline underline-offset-2 flex items-center gap-4'
@@ -63,7 +63,7 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <div className='flex flex-col gap-1'>
+        <div className='flex flex-col gap-3'>
           {socials.map((link, index) => (
             <a
               className='flex items-center gap-4'

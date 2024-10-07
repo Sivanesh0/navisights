@@ -55,12 +55,12 @@ const Navbar = () => {
       <div
         className={`w-full z-10 ${
           open ? "flex flex-col bg-background" : "hidden"
-        } absolute md:flex md:flex-row px-4 py-8 md:justify-center gap-2 md:gap-4 font-raleway text-sm md:text-xl md:bg-black text-white`}>
+        } absolute md:relative md:flex md:flex-row px-4 py-8 md:justify-center gap-2 md:gap-4 font-raleway text-sm md:text-xl md:bg-black text-white`}>
         {links.map((link, index) => (
           <NavLink
             className={({ isActive }) =>
-              `hover:text-transparent flex items-center gap-4 ${
-                isActive && "text-transparent"
+              `hover:text-transparent hover:font-bold flex items-center gap-4 ${
+                isActive && "text-transparent font-bold"
               } bg-gradient-to-tr from-purple-800 to-red bg-clip-text transition-all duration-150 ease-in`
             }
             onClick={() => setOpen(false)}
