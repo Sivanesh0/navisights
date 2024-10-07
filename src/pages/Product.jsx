@@ -81,6 +81,7 @@ const specifications = [
 
 const uses = [
   {
+    image: "/disabled-people.jpg",
     title: "Improved Mobility for Disabled and Hospitalized Individuals",
     content: [
       "By implementing voice-controlled, autonomous features, the vehicle provides independence and mobility for people with limited physical abilities.",
@@ -88,6 +89,7 @@ const uses = [
     ],
   },
   {
+    image: "/ambulance.jpg",
     title: "Efficient Transportation in Closed Ecosystems",
     content: [
       "Ideal for use in institutional environments like hospitals, universities, and industrial facilities, where frequent transportation across large areas is needed.",
@@ -95,6 +97,7 @@ const uses = [
     ],
   },
   {
+    image: "/self-driving-car.jpg",
     title: "Enhanced Accessibility and User Experience",
     content: [
       "The use of NLP-driven voice recognition allows users to easily interact with the vehicle, ensuring a smooth experience for individuals with special needs.",
@@ -102,12 +105,24 @@ const uses = [
     ],
   },
   {
+    image: "/plains-road.jpg",
     title: "Environmentally Sustainable Transportation",
     content: [
       "As a fully electric vehicle, it offers an eco-friendly alternative to traditional gasoline-powered transportation, significantly reducing environmental impact.",
       "Institutions can achieve their sustainability goals while offering better transportation solutions.",
     ],
   },
+];
+
+const images = [
+  "view-1.jpg",
+  "view-2.jpg",
+  "view-3.jpg",
+  "view-4.jpg",
+  "view-5.jpg",
+  "view-6.jpg",
+  "view-7.jpg",
+  "view-8.jpg",
 ];
 
 const Product = () => {
@@ -132,6 +147,18 @@ const Product = () => {
           <h1 className='md:text-center text-5xl md:text-7xl font-raleway font-light'>
             NextGen Trike
           </h1>
+          <hr className='border-dashed' />
+          {/* Images */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                className='w-full h-auto object-cover'
+                src={image}
+                alt={`View ${index + 1}`}
+              />
+            ))}
+          </div>
           <hr className='border-dashed' />
           {/* Features */}
           <h1 className='font-afacad-flux text-4xl md:text-center'>
@@ -185,27 +212,36 @@ const Product = () => {
       </section>
       {/* Uses */}
       <section className='bg-[url("/black-texture.png")] py-16 px-4 md:px-0 bg-black'>
-        <div className='md:w-2/3 mx-auto space-y-6'>
+        <div className='md:w-2/3 mx-auto space-y-12'>
           <h1 className='text-5xl font-afacad-flux font-semibold text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text'>
             Uses of the NextGen Trike
           </h1>
-          <div className='space-y-6'>
+          <div className='space-y-8'>
             {uses.map((use, index) => (
               <div
                 key={index}
                 className='font-raleway font-light cursor-pointe space-y-3 text-pretty'>
                 <div
-                  className={`flex ${
-                    index % 2 === 0 && "flex-row-reverse"
-                  } items-start gap-4`}>
-                  <h1 className='text-4xl font-semibold w-1/2'>{use.title}</h1>
-                  <div className='space-y-4 text-lg font-cormorant-garamond font-light w-1/2'>
-                    {use.content.map((text, t_index) => (
-                      <p key={t_index}>{text}</p>
-                    ))}
+                  className={`flex flex-col ${
+                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  } justify-between gap-4 w-full`}>
+                  <div className='md:w-1/2 max-h-60 overflow-hidden'>
+                    <img
+                      className='w-full object-bottom mx-auto'
+                      src={use.image}
+                      alt={use.title}
+                    />
+                  </div>
+                  <div className='md:w-1/2'>
+                    <h1 className='text-3xl font-semibold'>{use.title}</h1>
+                    <div className='space-y-4 text-lg font-cormorant-garamond font-light'>
+                      {use.content.map((text, t_index) => (
+                        <p key={t_index}>{text}</p>
+                      ))}
+                    </div>
                   </div>
                 </div>
-                <hr className="border-dashed" />
+                <hr className='border-dashed' />
               </div>
             ))}
           </div>
