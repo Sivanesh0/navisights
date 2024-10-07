@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollFx from "../components/ScrollAnimationComponent";
 
 const features = [
   {
@@ -130,33 +131,42 @@ const Product = () => {
     <div className='relative text-white bg-black'>
       {/* Problem Statement */}
       <section className='md:w-2/3 mx-auto space-y-6 py-16 px-4 md:px-0'>
-        <h1 className='text-5xl font-afacad-flux font-semibold text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text'>
-          Problem Statement
-        </h1>
-        <p className='font-cormorant-garamond text-2xl'>
-          &#8220;The blind, elderly, and hospitalized individuals lack
-          independence and face challenges in traveling safely and confidently.
-          People struggle with mobility within or outside closed ecosystems like
-          campuses, corporate complexes, and industrial facilities, leading to
-          inefficiencies and environmental concerns.&#8221;
-        </p>
+        <ScrollFx duration={1.0}>
+          <h1 className='text-5xl font-afacad-flux font-semibold text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text'>
+            Problem Statement
+          </h1>
+        </ScrollFx>
+        <ScrollFx duration={1.2}>
+          <p className='font-cormorant-garamond text-2xl'>
+            &#8220;The blind, elderly, and hospitalized individuals lack
+            independence and face challenges in traveling safely and
+            confidently. People struggle with mobility within or outside closed
+            ecosystems like campuses, corporate complexes, and industrial
+            facilities, leading to inefficiencies and environmental
+            concerns.&#8221;
+          </p>
+        </ScrollFx>
       </section>
       {/* Features, Specifications, Uses */}
       <section className='bg-[url("/cubes.png")] py-16 px-4 md:px-0'>
         <div className='md:w-2/3 mx-auto space-y-6'>
-          <h1 className='md:text-center text-5xl md:text-7xl font-raleway font-light'>
-            NextGen Trike
-          </h1>
+          <ScrollFx duration={1.0}>
+            <h1 className='md:text-center text-5xl md:text-7xl font-raleway font-light'>
+              NextGen Trike
+            </h1>
+          </ScrollFx>
           <hr className='border-dashed' />
           {/* Images */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-1'>
             {images.map((image, index) => (
-              <img
-                key={index}
-                className='w-full h-auto object-cover'
-                src={image}
-                alt={`View ${index + 1}`}
-              />
+              <ScrollFx key={index} duration={1.0 + index * 0.1}>
+                <img
+                  key={index}
+                  className='w-full h-auto object-cover'
+                  src={image}
+                  alt={`View ${index + 1}`}
+                />
+              </ScrollFx>
             ))}
           </div>
           <hr className='border-dashed' />
@@ -166,20 +176,20 @@ const Product = () => {
           </h1>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-7'>
             {features.map((feature, index) => (
-              <div
-                key={index}
-                className='font-raleway font-light cursor-pointer md:hover:scale-105 transition-all ease-in duration-200 space-y-3 text-pretty'>
-                <h1 className='font-normal text-6xl font-afacad-flux'>
-                  0{index + 1}
-                </h1>
-                <hr />
-                <h1 className='text-lg font-semibold'>{feature.title}</h1>
-                <div className='space-y-4 text-sm font-cormorant-garamond font-light'>
-                  {feature.content.map((text, t_index) => (
-                    <p key={t_index}>{text}</p>
-                  ))}
+              <ScrollFx duration={index * 0.3} key={index}>
+                <div className='font-raleway font-light cursor-pointer md:hover:scale-105 transition-all ease-in duration-200 space-y-3 text-pretty'>
+                  <h1 className='font-normal text-6xl font-afacad-flux'>
+                    0{index + 1}
+                  </h1>
+                  <hr />
+                  <h1 className='text-lg font-semibold'>{feature.title}</h1>
+                  <div className='space-y-4 text-sm font-cormorant-garamond font-light'>
+                    {feature.content.map((text, t_index) => (
+                      <p key={t_index}>{text}</p>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </ScrollFx>
             ))}
           </div>
           <hr className='border-dashed' />
@@ -189,23 +199,23 @@ const Product = () => {
           </h1>
           <div className='grid grid-cols-1 md:grid-cols-4 gap-7'>
             {specifications.map((feature, index) => (
-              <div
-                key={index}
-                className='font-raleway font-light cursor-pointer md:hover:scale-105 transition-all ease-in duration-200 space-y-3 text-center border px-4 py-11 rounded-lg bg-background'>
-                <div className='flex items-center justify-center p-4 size-24 mx-auto border rounded-lg bg-black'>
-                  <img
-                    className='mx-auto size-12'
-                    src={feature.icon}
-                    alt={feature.title}
-                  />
+              <ScrollFx duration={index * 0.3} key={index}>
+                <div className='font-raleway font-light cursor-pointer md:hover:scale-105 transition-all ease-in duration-200 space-y-3 text-center border px-4 py-11 rounded-lg bg-background'>
+                  <div className='flex items-center justify-center p-4 size-24 mx-auto border rounded-lg bg-black'>
+                    <img
+                      className='mx-auto size-12'
+                      src={feature.icon}
+                      alt={feature.title}
+                    />
+                  </div>
+                  <h1 className='text-lg font-semibold'>{feature.title}</h1>
+                  <div className='space-y-2 text-justify text-sm font-cormorant-garamond font-light'>
+                    {feature.content.map((text, t_index) => (
+                      <p key={t_index}>{text}</p>
+                    ))}
+                  </div>
                 </div>
-                <h1 className='text-lg font-semibold'>{feature.title}</h1>
-                <div className='space-y-2 text-justify text-sm font-cormorant-garamond font-light'>
-                  {feature.content.map((text, t_index) => (
-                    <p key={t_index}>{text}</p>
-                  ))}
-                </div>
-              </div>
+              </ScrollFx>
             ))}
           </div>
         </div>
@@ -213,36 +223,36 @@ const Product = () => {
       {/* Uses */}
       <section className='bg-[url("/black-texture.png")] py-16 px-4 md:px-0 bg-black'>
         <div className='md:w-2/3 mx-auto space-y-12'>
-          <h1 className='text-5xl font-afacad-flux font-semibold text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text'>
+          <h1 className='text-5xl font-raleway font-bold text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text'>
             Uses of the NextGen Trike
           </h1>
           <div className='space-y-8'>
             {uses.map((use, index) => (
-              <div
-                key={index}
-                className='font-raleway font-light cursor-pointe space-y-3 text-pretty'>
-                <div
-                  className={`flex flex-col ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  } justify-between gap-4 w-full`}>
-                  <div className='md:w-1/2 max-h-60 overflow-hidden'>
-                    <img
-                      className='w-full object-bottom mx-auto'
-                      src={use.image}
-                      alt={use.title}
-                    />
-                  </div>
-                  <div className='md:w-1/2'>
-                    <h1 className='text-3xl font-semibold'>{use.title}</h1>
-                    <div className='space-y-4 text-lg font-cormorant-garamond font-light'>
-                      {use.content.map((text, t_index) => (
-                        <p key={t_index}>{text}</p>
-                      ))}
+              <ScrollFx duration={1 + index * 0.2} key={index}>
+                <div className='font-raleway font-light cursor-pointe space-y-3 text-pretty'>
+                  <div
+                    className={`flex flex-col ${
+                      index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                    } justify-between gap-4 w-full`}>
+                    <div className='md:w-1/2 max-h-60 overflow-hidden'>
+                      <img
+                        className='w-full object-bottom mx-auto'
+                        src={use.image}
+                        alt={use.title}
+                      />
+                    </div>
+                    <div className='md:w-1/2'>
+                      <h1 className='text-3xl font-semibold'>{use.title}</h1>
+                      <div className='space-y-4 text-lg font-cormorant-garamond font-light'>
+                        {use.content.map((text, t_index) => (
+                          <p key={t_index}>{text}</p>
+                        ))}
+                      </div>
                     </div>
                   </div>
+                  <hr className='border-dashed' />
                 </div>
-                <hr className='border-dashed' />
-              </div>
+              </ScrollFx>
             ))}
           </div>
         </div>
