@@ -1,13 +1,13 @@
 import React from "react";
 import MyParticles from "../components/MyParticles";
-import styles from "../App.css";
 
 const Home = () => {
-  // bg-[url("/retro-purple-1.gif")] bg-no-repeat bg-cover
   return (
     <div className='relative'>
       {/* Hero Section */}
-      <div className='relative min-h-screen overflow-hidden w-full text-white font-raleway'>
+      <div
+        data-aos='fade-up'
+        className='relative min-h-screen overflow-hidden w-full text-white font-raleway'>
         <div className='absolute w-full h-full'>
           <MyParticles />
         </div>
@@ -20,7 +20,7 @@ const Home = () => {
       </div>
       {/* Quote */}
       <div className='text-center font-raleway text-2xl py-32 bg-[url("/black-texture.png")] bg-background text-white'>
-        <blockquote className='text-balance px-6 md:px-0'>
+        <blockquote data-aos='fade-up' className='text-balance px-6 md:px-0'>
           Explore the Future of Transportation with{" "}
           <span className='text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text font-bold'>
             Electric Vehicles
