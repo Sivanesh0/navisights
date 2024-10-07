@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Services = () => {
@@ -20,6 +20,12 @@ const Services = () => {
           pushing the boundaries of autonomous driving and electric mobility
           with a strong focus on user-centric design, safety, and efficiency.
         </p>
+        <a
+          href='/msme-udyam-registration.pdf'
+          target='_blank'
+          className='block w-fit px-4 py-2 text-lg rounded-md font-semibold font-afacad-flux border hover:bg-gradient-to-tr from-purple-800 to-maroon transition-all duration-300 ease-in'>
+          MSME Udyam Registration
+        </a>
       </section>
       {/* Vision and Aim */}
       <section className='bg-[url("/classy-fabric.png")] bg-purple-700 text-white'>
@@ -72,4 +78,4 @@ const Services = () => {
   );
 };
 
-export default Services
+export default Services;

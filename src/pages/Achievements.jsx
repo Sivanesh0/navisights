@@ -14,6 +14,16 @@ const achievements = [
     image: "/achievements/starnet-salem.jpg",
   },
   {
+    title: "NIT Trichy Top 5 Winners",
+    description: "",
+    image: "/achievements/top-5-nitt.jpg",
+  },
+  {
+    title: "SOLVEATHON OVERALL CHAMPION Sri Sairam Engineering College",
+    description: "",
+    image: "/achievements/solveathon-overall.jpg",
+  },
+  {
     title: "NAVISIGHTS in BUILD Program Bootcamp",
     description:
       "NAVISIGHTS earned a coveted spot in the BUILD Program's orientation bootcamp at IIT Hyderabad, further solidifying their position as a trailblazer in the startup ecosystem",

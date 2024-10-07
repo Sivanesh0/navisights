@@ -1,5 +1,6 @@
 import React from "react";
 import MyParticles from "../components/MyParticles";
+import styles from "../App.css";
 
 const Home = () => {
   // bg-[url("/retro-purple-1.gif")] bg-no-repeat bg-cover

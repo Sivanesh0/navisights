@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Outlet, useLocation } from "react-router-dom";
+import Chatbot from "./Chatbot";
 
 const Layout = () => {
   const location = useLocation();
@@ -20,6 +21,7 @@ const Layout = () => {
     <div
       ref={ref}
       className='flex flex-col justify-evenly bg-black h-screen overflow-y-scroll'>
+      <Chatbot />
       <Navbar />
       <Outlet />
       <Footer />
