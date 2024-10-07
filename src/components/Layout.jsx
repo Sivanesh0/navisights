@@ -20,7 +20,7 @@ const Layout = () => {
   return (
     <div
       ref={ref}
-      className='flex flex-col relative justify-evenly bg-black h-screen overflow-y-scroll'>
+      className='flex flex-col justify-evenly bg-black h-screen overflow-y-scroll'>
       <Chatbot />
       <Navbar />
       <Outlet />
