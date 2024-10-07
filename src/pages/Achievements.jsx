@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollFx from "../components/ScrollAnimationComponent";
 
 const achievements = [
   {
@@ -51,25 +52,26 @@ const Achievements = () => {
         <hr className='border-dashed' />
         <div className='space-y-6'>
           {achievements.map((achievement, index) => (
-            <div
-              key={index}
-              className={`flex flex-col md:flex-row ${
-                index % 2 !== 0 && "md:flex-row-reverse"
-              } items-center gap-4`}>
-              <img
-                className='h-64 mx-auto object-cover'
-                src={achievement.image}
-                alt={achievement.title}
-              />
-              <div className='md:w-1/2'>
-                <h2 className='text-2xl font-raleway font-bold'>
-                  {achievement.title}
-                </h2>
-                <p className='font-cormorant-garamond text-xl'>
-                  {achievement.description}
-                </p>
+            <ScrollFx duration={1.2} key={index}>
+              <div
+                className={`flex flex-col md:flex-row ${
+                  index % 2 !== 0 && "md:flex-row-reverse"
+                } items-center gap-4`}>
+                <img
+                  className='h-64 mx-auto object-cover'
+                  src={achievement.image}
+                  alt={achievement.title}
+                />
+                <div className='md:w-1/2'>
+                  <h2 className='text-2xl font-raleway font-bold'>
+                    {achievement.title}
+                  </h2>
+                  <p className='font-cormorant-garamond text-xl'>
+                    {achievement.description}
+                  </p>
+                </div>
               </div>
-            </div>
+            </ScrollFx>
           ))}
         </div>
       </section>
