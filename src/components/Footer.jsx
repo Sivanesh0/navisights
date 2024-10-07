@@ -7,12 +7,13 @@ import {
   FacebookIcon,
   InstagramIcon,
   YoutubeIcon,
+  LinkedinIcon,
 } from "lucide-react";
 
 const Footer = () => {
   const socials = [
     {
-      link: "mailto:sivaneshkishore55@gmail.com",
+      link: "mailto:navisights2023@gmail.com",
       name: "Email",
       icon: <MailIcon strokeWidth={1} />,
     },
@@ -27,12 +28,17 @@ const Footer = () => {
       icon: <FacebookIcon strokeWidth={1} />,
     },
     {
-      link: "https://www.instagram.com/",
+      link: "https://www.linkedin.com/in/sivanesh-k-s-6a9991218/",
+      name: "LinkedIn",
+      icon: <LinkedinIcon strokeWidth={1} />,
+    },
+    {
+      link: "https://www.instagram.com/navisights/",
       name: "Instagram",
       icon: <InstagramIcon strokeWidth={1} />,
     },
     {
-      link: "https://www.youtube.com",
+      link: "https://www.youtube.com/watch?v=QjQQ6QvxTto",
       name: "Youtube",
       icon: <YoutubeIcon strokeWidth={1} />,
     },

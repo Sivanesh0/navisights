@@ -2,6 +2,7 @@ import React from "react";
 import MyParticles from "../components/MyParticles";
 
 const Home = () => {
+  // bg-[url("/retro-purple-1.gif")] bg-no-repeat bg-cover
   return (
     <div className='relative'>
       {/* Hero Section */}
