@@ -46,14 +46,17 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className='relative w-full'>
+    <div className='relative w-full flex flex-col md:flex-row md:items-center md:justify-around text-white'>
       <div
         onClick={() => setOpen(!open)}
         className='absolute top-4 right-4 md:hidden text-white z-20'>
         {open ? <XIcon /> : <MenuIcon />}
       </div>
+      <h1 className='p-4 md:p-0 font-afacad-flux font-extralight text-2xl md:text-4xl'>
+        Navisights
+      </h1>
       <div
-        className={`w-full z-10 ${
+        className={`w-full md:w-auto z-10 ${
           open ? "flex flex-col bg-background" : "hidden"
         } absolute md:relative md:flex md:flex-row px-4 py-8 md:justify-center gap-2 md:gap-4 font-raleway text-sm md:text-xl md:bg-black text-white`}>
         {links.map((link, index) => (
