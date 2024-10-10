@@ -1,24 +1,33 @@
 import React from "react";
 import MyParticles from "../components/MyParticles";
 import ScrollAnimationComponent from "../components/ScrollAnimationComponent";
+import Model from "../components/Model";
 
 const Home = () => {
   return (
     <div className='relative'>
       {/* Hero Section */}
-      <div className='relative min-h-screen overflow-hidden w-full text-white font-raleway'>
+      <div className='relative md:px-6 grid md:grid-cols-2 items-center min-h-screen overflow-hidden w-full text-white font-raleway'>
+        {/* Particles */}
         <div className='absolute w-full h-full'>
           <MyParticles />
         </div>
-        <ScrollAnimationComponent duration={1.0} yOffset={200}>
-          <h1 className='absolute left-1/2 -translate-x-1/2 text-5xl md:text-6xl leading-tight text-center drop-shadow-[0_2.2px_2.2px_rgba(0,0,0,0.8)]'>
+        <ScrollAnimationComponent duration={1.0}>
+          <h1 className='md:order-2 md:w-1/2 text-5xl md:text-6xl leading-tight text-center md:text-left drop-shadow-[0_2.2px_2.2px_rgba(0,0,0,0.8) mx-auto'>
             Welcome to the Future of{" "}
             <span className='text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text font-bold'>
               Autonomous EVs
             </span>
           </h1>
         </ScrollAnimationComponent>
+        {/* 3D Model */}
+        <div className='order-first md:order-last z-10'>
+          <ScrollAnimationComponent duration={1.0}>
+            <Model />
+          </ScrollAnimationComponent>
+        </div>
       </div>
+
       {/* Quote */}
       <div className='text-center font-raleway text-2xl py-32 bg-[url("/black-texture.png")] bg-background text-white'>
         <ScrollAnimationComponent>

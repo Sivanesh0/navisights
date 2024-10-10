@@ -1,0 +1,11 @@
+Model Information:
+* title:	Soka. Electric bike
+* source:	https://sketchfab.com/3d-models/soka-electric-bike-763b6113f2374ae6abd49a241d249724
+* author:	Eddie Mauro ™ (https://sketchfab.com/edgarkhan)
+
+Model License:
+* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Soka. Electric bike" (https://sketchfab.com/3d-models/soka-electric-bike-763b6113f2374ae6abd49a241d249724) by Eddie Mauro ™ (https://sketchfab.com/edgarkhan) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
