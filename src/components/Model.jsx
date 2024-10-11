@@ -4,8 +4,15 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { useRef } from "react";
 
 const Scooter = () => {
-  const { scene } = useGLTF("/electric_bike/scene.gltf");
-  return <primitive object={scene} scale={0.05} position={[30, -40, 20]} />;
+  const { scene } = useGLTF("/eva-model/scene.gltf");
+  return (
+    <primitive
+      rotation={[-Math.PI / 2, 0, 130]}
+      object={scene}
+      scale={0.05}
+      position={[-10, -30, 30]}
+    />
+  );
 };
 
 const Model = () => {
