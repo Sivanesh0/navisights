@@ -1,7 +1,6 @@
 import React from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
-import { useRef } from "react";
 
 const Scooter = () => {
   const { scene } = useGLTF("/eva-model/scene.gltf");
@@ -24,7 +23,8 @@ const Model = () => {
         camera={{ position: [100, 50, -50], fov: 50 }}
         gl={{ antialias: true }}>
         <ambientLight intensity={0.5} />
-        <directionalLight position={[100, 50, -50]} intensity={1} />
+        <directionalLight position={[100, 50, -50]} intensity={0.5} />
+        <directionalLight position={[0, 50, -50]} intensity={0.5} />
         <Scooter />
         <OrbitControls enableZoom={true} />
       </Canvas>
