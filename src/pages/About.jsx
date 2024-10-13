@@ -19,7 +19,7 @@ const team = [
   },
   {
     image: "/bharat.jpg",
-    title: "Bharat Kumar",
+    title: "M Barath Kumar",
     description: "CIO",
   },
 ];
