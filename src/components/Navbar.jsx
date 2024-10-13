@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import ScrollFx from "./ScrollAnimationComponent";
 
 export const links = [
   {
@@ -46,15 +47,13 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className='relative w-full flex flex-col md:flex-row md:items-center md:justify-around text-white'>
+    <div className='relative w-full flex flex-col md:flex-row md:items-center md:justify-around text-white p-4'>
       <div
         onClick={() => setOpen(!open)}
         className='absolute top-4 right-4 md:hidden text-white z-20'>
         {open ? <XIcon /> : <MenuIcon />}
       </div>
-      <h1 className='p-4 md:p-0 font-afacad-flux font-extralight text-2xl md:text-4xl'>
-        Navisights
-      </h1>
+      <img src='/logo.png' className='w-1/2 md:w-40' alt='Navisights' />
       <div
         className={`w-full md:w-auto z-10 ${
           open ? "flex flex-col bg-background" : "hidden"

@@ -51,9 +51,7 @@ const Footer = () => {
   return (
     <div className='bg-gradient-to-tr from-purple-900 to-dark-maroon text-white px-3 py-7 flex flex-col md:flex-row gap-8 justify-around font-raleway'>
       <div className='space-y-4 text-center md:text-left place-self-center'>
-        <h1 className='text-4xl md:text-5xl font-afacad-flux font-light'>
-          Navisights
-        </h1>
+        <img src='/logo.png' className='w-44 mx-auto' alt='Navisights' />
         <h1 className='text-sm'>Copyrights 2024 © All rights reserved.</h1>
       </div>
       <div className='flex justify-around md:w-1/2'>
