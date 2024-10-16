@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import ScrollFx from "./ScrollAnimationComponent";
 
 export const links = [
   {
@@ -37,27 +36,25 @@ export const links = [
     name: "Achievements",
     icon: <AwardIcon strokeWidth={1} />,
   },
-  // {
-  //   path: "/faq",
-  //   name: "FAQ",
-  // },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className='relative w-full flex flex-col md:flex-row md:items-center md:justify-around text-white p-4'>
+    <div className='sticky top-0 bg-black/50 z-30 w-full flex flex-col md:flex-row md:items-center md:justify-around text-white'>
       <div
         onClick={() => setOpen(!open)}
-        className='absolute top-4 right-4 md:hidden text-white z-20'>
+        className='absolute top-4 right-4 md:hidden text-white z-30'>
         {open ? <XIcon /> : <MenuIcon />}
       </div>
-      <img src='/logo.png' className='w-1/2 md:w-40' alt='Navisights' />
+      <div className='p-4'>
+        <img src='/logo.png' className='w-1/2 md:w-40' alt='Navisights' />
+      </div>
       <div
-        className={`w-full md:w-auto z-10 ${
-          open ? "flex flex-col bg-background" : "hidden"
-        } absolute md:relative md:flex md:flex-row px-4 py-8 md:justify-center gap-2 md:gap-4 font-raleway text-sm md:text-xl md:bg-black text-white`}>
+        className={`w-full md:w-auto z-20 transform transition-transform duration-300 ease-in-out ${
+          open ? "translate-y-0" : "-translate-y-full"
+        } absolute md:relative md:flex md:flex-row px-4 py-8 md:justify-center space-y-2 md:gap-4 font-raleway text-sm md:text-xl md:bg-black text-white bg-background`}>
         {links.map((link, index) => (
           <NavLink
             className={({ isActive }) =>

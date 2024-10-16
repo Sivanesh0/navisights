@@ -35,7 +35,7 @@ const ScrollNumber = ({ targetNumber, unit, title }) => {
   return (
     <div ref={ref} className='font-afacad-flux text-center'>
       <motion.h1
-        className='text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text text-8xl'
+        className='text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text text-6xl md:text-8xl'
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
         transition={{ duration: 1 }}>

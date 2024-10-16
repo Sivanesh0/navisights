@@ -213,10 +213,10 @@ const Testimonial = ({ name, image, message, role, index }) => {
           </p>
         </blockquote>
         <figcaption className='font-afacad-flux'>
-          <div className='text-purple-900 font-raleway text-lg font-bold'>
+          <div className='text-purple-600 font-raleway text-lg font-bold'>
             {name}
           </div>
-          <div className='text-slate-500'>{role}</div>
+          <div className='text-slate-400'>{role}</div>
         </figcaption>
       </div>
     </figure>
