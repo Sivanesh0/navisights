@@ -328,7 +328,7 @@ const Product = () => {
                   <span className='font-afacad-flux text-xl md:text-2xl font-semibold'>
                     {faq.question}
                   </span>
-                  <Accordion.Trigger className='text-3xl data-[state=open]:text-purple-700 font-bold'>
+                  <Accordion.Trigger className='text-3xl data-[state=open]:text-purple-700 data-[state=open]:rotate-45 data-[state=open]:translate-x-1 data-[state=open]:text-4xl font-bold'>
                     +
                   </Accordion.Trigger>
                 </Accordion.Header>

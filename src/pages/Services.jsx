@@ -8,7 +8,7 @@ const Services = () => {
   return (
     <div className='relative text-white bg-black'>
       {/* About Startup */}
-      <section className='md:w-2/3 mx-auto space-y-4 px-4 text-justify md:text-left md:px-0 py-16'>
+      <section className='md:w-2/3 mx-auto space-y-4 px-4 md:text-left md:px-0 py-16'>
         <ScrollFx duration={0.8}>
           <h1 className='font-afacad-flux text-5xl font-semibold text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text'>
             About Navisights
@@ -35,9 +35,84 @@ const Services = () => {
           </a>
         </ScrollFx>
       </section>
+      {/* Lions Club's Collaboration */}
+      <section className='bg-[url("/classy-fabric.png")] bg-purple-700 text-white'>
+        <div className='py-16 px-4 md:text-left md:px-0 bg-gradient-to-r from-purple-900/75 to-dark-maroon/75'>
+          <div className='md:w-2/3 mx-auto space-y-4'>
+            <ScrollFx duration={0.8}>
+              <h1 className='text-5xl font-semibold font-afacad-flux text-white'>
+                Our Collaboration with Lions Foundation for Blind
+              </h1>
+            </ScrollFx>
+            <ScrollFx duration={1.0}>
+              <p className='text-white font-cormorant-garamond text-xl'>
+                At the Lions Blind Foundation, there are 17 visually impaired
+                individuals, each with their own families. Mobility remains a
+                significant challenge for them. When we introduced our product,
+                their positive response was overwhelming. In light of this, our
+                team at NaviSights has committed to supporting them on a weekly
+                and monthly basis, using whatever minimal funds we have
+                available.
+              </p>
+            </ScrollFx>
+            <div className='grid md:grid-cols-2 gap-4'>
+              <ScrollFx duration={1.1}>
+                <div className='h-32 md:h-56 rounded-md shadow-lg overflow-hidden'>
+                  <img
+                    className='object-cover object-center'
+                    src='/achievements/lion-club-1.png'
+                    alt='lion-club'
+                  />
+                </div>
+              </ScrollFx>
+              <ScrollFx duration={1.2}>
+                <div className='h-32 md:h-56 rounded-md shadow-lg overflow-hidden'>
+                  <img
+                    className='object-cover object-center'
+                    src='/achievements/lion-club-2.png'
+                    alt='lion-club'
+                  />
+                </div>
+              </ScrollFx>
+              <ScrollFx duration={1.3}>
+                <div className='h-32 md:h-56 rounded-md shadow-lg overflow-hidden'>
+                  <img
+                    className='object-cover object-center'
+                    src='/achievements/lion-club-3.png'
+                    alt='lion-club'
+                  />
+                </div>
+              </ScrollFx>
+              <ScrollFx duration={1.4}>
+                <div className='h-32 md:h-56 rounded-md shadow-lg overflow-hidden'>
+                  <img
+                    className='object-cover object-center'
+                    src='/achievements/lion-club-4.png'
+                    alt='lion-club'
+                  />
+                </div>
+              </ScrollFx>
+            </div>
+            <ScrollFx duration={1.1}>
+              <div className='h-32 md:h-96 col-span-2 rounded-md shadow-lg overflow-hidden'>
+                <img
+                  className='object-cover w-full object-center'
+                  src='/achievements/lion-club-0.png'
+                  alt='lion-club'
+                />
+              </div>
+            </ScrollFx>
+            <ScrollFx duration={0.7}>
+              <h1 className='text-center font-cormorant-garamond text-4xl'>
+                “Together, let's help them overcome these challenges and grow.”
+              </h1>
+            </ScrollFx>
+          </div>
+        </div>
+      </section>
       {/* Vision and Aim */}
       <section className='bg-[url("/classy-fabric.png")] bg-purple-700 text-white'>
-        <div className='py-16 px-4 text-justify md:text-left md:px-0 bg-gradient-to-r from-purple-900/75 to-dark-maroon/75'>
+        <div className='pb-16 px-4 md:text-left md:px-0 bg-gradient-to-r from-purple-900/75 to-dark-maroon/75'>
           <div className='md:w-2/3 mx-auto space-y-4'>
             <ScrollFx duration={0.8}>
               <h1 className='text-5xl font-semibold font-afacad-flux text-white'>
@@ -63,7 +138,7 @@ const Services = () => {
         </div>
       </section>
       {/* Our Product */}
-      <section className='py-16 px-4 text-justify md:text-left md:px-0 bg-[url("/black-grid-texture.png")]'>
+      <section className='py-16 px-4 md:text-left md:px-0 bg-[url("/black-grid-texture.png")]'>
         <div className='md:w-2/3 mx-auto space-y-4'>
           <ScrollFx>
             <h1 className='font-afacad-flux text-5xl font-semibold text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text'>

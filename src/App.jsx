@@ -4,7 +4,6 @@ import Services from "./pages/Services";
 import Product from "./pages/Product";
 import About from "./pages/About";
 import Achievements from "./pages/Achievements";
-import FAQ from "./pages/FAQ";
 import Layout from "./components/Layout";
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
         <Route path='product' element={<Product />} />
         <Route path='about' element={<About />} />
         <Route path='achievements' element={<Achievements />} />
-        <Route path='faq' element={<FAQ />} />
       </Route>
     </Routes>
   );
