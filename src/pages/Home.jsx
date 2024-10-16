@@ -2,6 +2,7 @@ import React from "react";
 import MyParticles from "../components/MyParticles";
 import ScrollAnimationComponent from "../components/ScrollAnimationComponent";
 import Model from "../components/Model";
+import ScrollNumber from "../components/ScrollNumber";
 
 const testimonials = [
   {
@@ -59,8 +60,28 @@ const Home = () => {
           </ScrollAnimationComponent>
         </div>
       </div>
-      {/* Tagline/Moto */}
+      {/* Performance Specs */}
       <section className='py-10'>
+        <div className='flex w-1/2 flex-col md:flex-row items-center justify-around mx-auto'>
+          <ScrollNumber
+            targetNumber={25}
+            unit={"KM/HR"}
+            title={"Maximum Speed"}
+          />
+          <ScrollNumber
+            targetNumber={100}
+            unit={"KG"}
+            title={"Payload Capacity"}
+          />
+          <ScrollNumber
+            targetNumber={250}
+            unit={"KG"}
+            title={"Total Vehicle Weight"}
+          />
+        </div>
+      </section>
+      {/* Tagline/Moto */}
+      <section className='py-16'>
         <ScrollAnimationComponent duration={1.2}>
           <h1 className='text-white font-cormorant-garamond font-extralight text-center text-balance text-4xl'>
             &#8220;Think Mobility, Think Navisights&#8221;
@@ -103,6 +124,14 @@ const Home = () => {
               enabling seamless navigation and transforming lives worldwide.
               "Gateway to boundless independence and empowerment."
             </p>
+          </ScrollAnimationComponent>
+          <ScrollAnimationComponent duration={1.3}>
+            <a
+              className='px-4 py-2 text-xl rounded-md font-semibold font-afacad-flux border hover:bg-gradient-to-tr from-purple-800 to-maroon transition-all duration-300 ease-in'
+              href='https://forms.gle/9nACqGTVZUGbh1TW8'
+              target='_blank'>
+              Have Queries?
+            </a>
           </ScrollAnimationComponent>
         </div>
       </div>
