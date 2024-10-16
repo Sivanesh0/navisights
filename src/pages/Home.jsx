@@ -83,9 +83,7 @@ const Home = () => {
       {/* Tagline/Moto */}
       <section className='py-16'>
         <ScrollAnimationComponent duration={1.2}>
-          <h1 className='text-white font-cormorant-garamond font-extralight text-center text-balance text-4xl'>
-            &#8220;Think Mobility, Think Navisights&#8221;
-          </h1>
+          <img src='/moto.png' className=' md:w-1/2 mx-auto' alt='moto' />
         </ScrollAnimationComponent>
       </section>
       {/* Quote */}
