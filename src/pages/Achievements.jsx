@@ -9,6 +9,12 @@ const achievements = [
     image: "/achievements/itic-incubator-hyderabad.jpg",
   },
   {
+    title: "IMPAIRATHON 2024 Top 3",
+    description:
+      "Our team secured 3rd place out of 300 participants at IMPAIRATHON 2024, hosted by Karpagam College of Engineering. We were honored with a cash prize of ₹30,000 in recognition of our achievement.",
+    image: "/achievements/impairathon-2024.jpg",
+  },
+  {
     title: "NAVISIGHTS Impresses at Startnet Salem",
     description:
       "NAVISIGHTS dazzled entrepreneurs at Startnet Salem, presenting a game-changing startup poised to revolutionize the industry.",
@@ -18,6 +24,12 @@ const achievements = [
     title: "NIT Trichy Top 5 Winners",
     description: "",
     image: "/achievements/top-5-nitt.jpg",
+  },
+  {
+    title: "",
+    description:
+      "Our team received recognition from Sri C. Valliappa, Chairman of Sona Group of Institutions, Salem.",
+    image: "/achievements/sona-college.jpg",
   },
   {
     title: "SOLVEATHON OVERALL CHAMPION Sri Sairam Engineering College",
