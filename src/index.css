@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .icon-gradient {
@@ -23,8 +23,44 @@
 
 /* Define the gradient */
 .svg-gradient {
-  background: linear-gradient(to top right, #6B21A8, #EF4444);
+  background: linear-gradient(to top right, #6b21a8, #ef4444);
   -webkit-background-clip: text;
   background-clip: text;
   fill: transparent;
+}
+
+/* styles.css */
+.AccordionChevron {
+  transition: transform 300ms;
+}
+.AccordionTrigger[data-state="open"] > .AccordionChevron {
+  transform: rotate(180deg);
+}
+/* styles.css */
+.AccordionContent {
+  overflow: hidden;
+}
+.AccordionContent[data-state="open"] {
+  animation: slideDown 300ms ease-out;
+}
+.AccordionContent[data-state="closed"] {
+  animation: slideUp 300ms ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: 100px;
+  }
+  to {
+    height: 0;
+  }
 }

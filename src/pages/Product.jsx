@@ -1,5 +1,6 @@
 import React from "react";
 import ScrollFx from "../components/ScrollAnimationComponent";
+import * as Accordion from "@radix-ui/react-accordion";
 
 const features = [
   {
@@ -124,6 +125,60 @@ const images = [
   "view-6.jpg",
   "view-7.jpg",
   "view-8.jpg",
+];
+
+const faqs = [
+  {
+    question: "What if it rains?",
+    answer:
+      "The vehicle has a roof-like structure to protect the user from rain.",
+  },
+  {
+    question: "How is safety ensured?",
+    answer:
+      "Emergency situations are handled with a unique ID system and biometric verification for added security.",
+  },
+  {
+    question:
+      "Why is it a single-seater when a golf cart battery could be used?",
+    answer:
+      "The single-seat design promotes independence and doesn't require extra manpower. Future versions may feature a two-wheel model for further development.",
+  },
+  {
+    question:
+      "How will the person go further after reaching their destination?",
+    answer:
+      "The vehicle comes with a smart blind stick to assist the person beyond the vehicle.",
+  },
+  {
+    question: " Is the price affordable with all these features?",
+    answer:
+      "By analyzing the economy of different regions (tier 1, tier 2, tier 3 cities), we aim to make the vehicle affordable for everyone, focusing on helping people navigate easily.",
+  },
+  {
+    question: "Can the vehicle handle speed breakers and slopes?",
+    answer:
+      "Yes, the tires are specially designed and thoroughly tested to overcome speed bumps and slopes.",
+  },
+  {
+    question: "How will a blind person recognize the vehicle?",
+    answer:
+      'A personal assistant, similar to Hey Google" or "Siri," will help guide the user. All information will be available through an app, and fleet operators or area managers can assist in case of emergency.',
+  },
+  {
+    question: "Can the vehicle be stolen?",
+    answer: "No, it includes several safety features to prevent theft.",
+  },
+  {
+    question: "Can users sell goods or use the vehicle for other purposes?",
+    answer:
+      "Yes, the vehicle can be used for generating independent income, such as selling goods.",
+  },
+  {
+    question: "Can it detect both moving and non-moving obstacles?",
+    answer:
+      "Yes, it uses a combination of lidar and radar mapping to detect both types of obstacles effectively.",
+  },
 ];
 
 const Product = () => {
@@ -255,6 +310,34 @@ const Product = () => {
               </ScrollFx>
             ))}
           </div>
+        </div>
+      </section>
+      {/* FAQs */}
+      <section className='py-16 px-4 md:px-0 bg-black bg-[url("/black-grid-texture.png")]'>
+        <div className='md:w-2/3 mx-auto'>
+          <h1 className='text-5xl font-raleway font-bold text-transparent bg-gradient-to-tr from-purple-800 to-red bg-clip-text'>
+            Frequently Asked Questions
+          </h1>
+          <Accordion.Root type='single' collapsible className='space-y-6 py-10'>
+            {faqs.map((faq, index) => (
+              <Accordion.Item
+                className={index !== faqs.length - 1 ? "border-b pb-3" : ""}
+                key={index}
+                value={index + 1}>
+                <Accordion.Header className='flex items-center justify-between text-xl'>
+                  <span className='font-afacad-flux text-xl md:text-2xl font-semibold'>
+                    {faq.question}
+                  </span>
+                  <Accordion.Trigger className='text-3xl data-[state=open]:text-purple-700 font-bold'>
+                    +
+                  </Accordion.Trigger>
+                </Accordion.Header>
+                <Accordion.Content className='font-extralight AccordionChevron'>
+                  <div className='py-2'>{faq.answer}</div>
+                </Accordion.Content>
+              </Accordion.Item>
+            ))}
+          </Accordion.Root>
         </div>
       </section>
     </div>

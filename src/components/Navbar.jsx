@@ -42,7 +42,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className='sticky top-0 bg-black/50 z-30 w-full flex flex-col md:flex-row md:items-center md:justify-around text-white'>
+    <div className='sticky top-0 bg-black/70 md:bg-black/90 z-30 w-full flex flex-col md:flex-row md:items-center md:justify-around text-white'>
       <div
         onClick={() => setOpen(!open)}
         className='absolute top-4 right-4 md:hidden text-white z-30'>
@@ -54,7 +54,7 @@ const Navbar = () => {
       <div
         className={`w-full md:w-auto z-20 transform transition-transform duration-300 ease-in-out ${
           open ? "translate-y-0" : "-translate-y-full"
-        } absolute md:relative md:flex md:flex-row px-4 py-8 md:justify-center space-y-2 md:gap-4 font-raleway text-sm md:text-xl md:bg-black text-white bg-background`}>
+        } md:translate-y-0 absolute md:relative md:flex md:flex-row px-4 py-8 md:justify-center space-y-2 md:space-y-0 md:gap-4 font-raleway text-sm md:text-xl text-white bg-background md:bg-transparent`}>
         {links.map((link, index) => (
           <NavLink
             className={({ isActive }) =>
