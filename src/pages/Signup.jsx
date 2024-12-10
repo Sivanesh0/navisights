@@ -176,9 +176,11 @@ const Signup = () => {
   return (
     <div className="relative text-white bg-black bg-[url('/black-texture.png')] py-16">
       <section className='md:w-2/3 px-4 mx-auto space-y-6'>
-        <h1 className='text-5xl font-afacad-flux'>Create an Account</h1>
+        <h1 className='text-5xl font-afacad-flux text-center'>
+          Create an Account
+        </h1>
         <form
-          className='flex flex-col gap-4 font-afacad-flux text-xl'
+          className='flex flex-col gap-4 font-afacad-flux text-xl md:w-2/3 mx-auto'
           onSubmit={handleSubmit}>
           <input
             value={user.name}

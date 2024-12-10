@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { links } from "./Navbar";
 import {
   MailIcon,
   PhoneIcon,
@@ -8,6 +7,16 @@ import {
   InstagramIcon,
   YoutubeIcon,
   LinkedinIcon,
+  BoxIcon,
+  HouseIcon,
+  InfoIcon,
+  HeartHandshakeIcon,
+  AwardIcon,
+  MenuIcon,
+  XIcon,
+  UserRoundPlusIcon,
+  LogInIcon,
+  LayoutDashboardIcon,
 } from "lucide-react";
 
 const Footer = () => {
@@ -41,6 +50,33 @@ const Footer = () => {
       link: "https://www.youtube.com/watch?v=QjQQ6QvxTto",
       name: "Youtube",
       icon: <YoutubeIcon strokeWidth={1} />,
+    },
+  ];
+  const links = [
+    {
+      path: "/",
+      name: "Home",
+      icon: <HouseIcon strokeWidth={1} />,
+    },
+    {
+      path: "/services",
+      name: "Services",
+      icon: <HeartHandshakeIcon strokeWidth={1} />,
+    },
+    {
+      path: "/product",
+      name: "Product",
+      icon: <BoxIcon strokeWidth={1} />,
+    },
+    {
+      path: "/about",
+      name: "About",
+      icon: <InfoIcon strokeWidth={1} />,
+    },
+    {
+      path: "/achievements",
+      name: "Achievements",
+      icon: <AwardIcon strokeWidth={1} />,
     },
   ];
 

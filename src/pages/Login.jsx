@@ -1,14 +1,16 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { auth } from "../../firebaseConfig";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [credentials, setCredentials] = React.useState({
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(true);
 
   const handleSignIn = async (e) => {
@@ -40,13 +42,14 @@ const Login = () => {
       }
 
       toast.success("Sign-in successful!");
+      navigate("/profile");
       // Redirect or perform actions after successful sign-in
     } catch (err) {
       console.error(err);
       if (err.code === "auth/user-not-found") {
         toast.error("No user found with this email.");
-      } else if (err.code === "auth/wrong-password") {
-        toast.error("Incorrect password. Please try again.");
+      } else if (err.code === "auth/invalid-credential") {
+        toast.error("Invalid Credentials. Please try again.");
       } else {
         toast.error("An error occurred. Please try again.");
       }
@@ -63,9 +66,9 @@ const Login = () => {
   return (
     <div className="relative text-white bg-black bg-[url('/black-texture.png')] py-16">
       <section className='md:w-2/3 px-4 mx-auto space-y-6'>
-        <h1 className='text-5xl font-afacad-flux'>Sign In</h1>
+        <h1 className='text-5xl text-center font-afacad-flux'>Log In</h1>
         <form
-          className='flex flex-col gap-4 font-afacad-flux text-xl'
+          className='flex flex-col gap-4 md:w-2/3 mx-auto font-afacad-flux text-xl'
           onSubmit={handleSignIn}>
           <input
             value={credentials.email}
