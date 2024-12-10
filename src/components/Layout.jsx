@@ -3,6 +3,8 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Outlet, useLocation } from "react-router-dom";
 import Chatbot from "./Chatbot";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const Layout = () => {
   const location = useLocation();
@@ -23,6 +25,7 @@ const Layout = () => {
       className='flex flex-col justify-evenly bg-black h-screen overflow-y-scroll'>
       <Chatbot />
       <Navbar />
+      <ToastContainer />
       <Outlet />
       <Footer />
     </div>

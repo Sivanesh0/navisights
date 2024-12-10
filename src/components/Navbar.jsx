@@ -6,6 +6,8 @@ import {
   AwardIcon,
   MenuIcon,
   XIcon,
+  UserRoundPlusIcon,
+  LogInIcon,
 } from "lucide-react";
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
@@ -36,6 +38,16 @@ export const links = [
     name: "Achievements",
     icon: <AwardIcon strokeWidth={1} />,
   },
+  {
+    path: "/signup",
+    name: "Sign Up",
+    icon: <UserRoundPlusIcon strokeWidth={1} />,
+  },
+  {
+    path: "/login",
+    name: "Log In",
+    icon: <LogInIcon strokeWidth={1} />,
+  },
 ];
 
 const Navbar = () => {
@@ -54,7 +66,7 @@ const Navbar = () => {
       <div
         className={`w-full md:w-auto z-20 transform transition-transform duration-300 ease-in-out ${
           open ? "translate-y-0" : "-translate-y-full"
-        } md:translate-y-0 absolute md:relative md:flex md:flex-row px-4 py-8 md:justify-center space-y-2 md:space-y-0 md:gap-4 font-raleway text-sm md:text-xl text-white bg-background md:bg-transparent`}>
+        } md:translate-y-0 absolute md:relative md:flex md:flex-row px-4 py-8 md:justify-center space-y-2 md:space-y-0 md:gap-6 font-raleway text-sm md:text-xl text-white bg-background md:bg-transparent`}>
         {links.map((link, index) => (
           <NavLink
             className={({ isActive }) =>
