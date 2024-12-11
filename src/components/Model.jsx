@@ -3,7 +3,9 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 
 const Scooter = () => {
-  const { scene } = useGLTF("/gltf-model/gltf_surface_modeling_assem.gltf");
+  const { scene } = useGLTF(
+    "/navisights-trike/navisights_trike_assy_file.gltf"
+  );
   return (
     <primitive
       rotation={[0, 1.3, 0]}
