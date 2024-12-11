@@ -3,13 +3,13 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 
 const Scooter = () => {
-  const { scene } = useGLTF("/nextgen-trike/result.gltf");
+  const { scene } = useGLTF("/gltf-model/gltf_surface_modeling_assem.gltf");
   return (
     <primitive
-      rotation={[-Math.PI / 2, 0, 130]}
+      rotation={[0, 1.3, 0]}
       object={scene}
-      scale={0.05}
-      position={[-10, -30, 30]}
+      scale={30}
+      position={[-80, -30, 10]}
     />
   );
 };
